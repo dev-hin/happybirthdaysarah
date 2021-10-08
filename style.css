@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+  background: linear-gradient(#0c0701, #ff9100);
+  font-family: "PT Sans Narrow", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  color: #fff;
+  font-size: 4rem;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.7);
+  letter-spacing: 20px;
+  margin: 100px 0 50px;
+  text-transform: uppercase;
+}
+
+.lclick {
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.rclick {
+  margin: 0;
+  color: #ff9100;
+  font-size: 2rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+span {
+  color: #ff9100;
+  font-size: 4rem;
+}
+
+.note marquee {
+  width: auto;
+  height: 50px;
+  margin: 20px auto;
+  cursor: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vh;
+  margin: 50px 0px 100px;
+}
+
+.left,
+.right {
+  cursor: none;
+  font-size: 5rem;
+  height: 25vh;
+  width: 100px;
+  margin: 0 50px;
+}
+
+.sarah {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  min-width: 280px;
+  height: 45vh;
+  border: 5px solid #0c0701;
+  border-radius: 1rem;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  padding: 10px;
+  position: relative;
+  transform: scale(0.9) rotate3d(0, 0, 0, 0);
+  transition: all 0.5s ease-in;
+}
+
+.sarah:hover {
+  transform: scale(1.2);
+}
+
+.sarah.active {
+  transform: rotate3d(0, 2, 0.5, 3.142rad) scale(1.2);
+}
+
+.note {
+  text-align: center;
+  text-shadow: 2px 2px rgba(255, 230, 4, 0.8);
+  width: 50vh;
+  color: #0c0701;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.note span {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+
+  .sarah {
+    min-width: 150px;
+  }
+
+  .sarah:nth-of-type(4),
+  .sarah:nth-of-type(5) {
+    display: none;
+  }
+}
