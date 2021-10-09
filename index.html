@@ -13,27 +13,10 @@
   <p class="lclick">🎃 ~ left-click an image to play an iconic Sarah tune ~ 🎃</p>
   <p class="rclick">💀 ~ right-click to pause ~ 💀</p>
 
-  <div class="container">
-    <div class="left">
-      <marquee height="350" direction ="up" behavior="alternate" scrollamount="8">👻 👻 👻</marquee>
-    </div>
-
-    <!-- <div class="sarah">
-      <img src = "./img/sarah1.jpg" />
-    </div>
-    <div class="sarah">
-      <img src = "./img/sarah2.jpg" />
-    </div>
-    <div class="sarah">
-      <img src = "./img/sarah3.jpg" />
-    </div>
-    <div class="sarah">
-      <img src = "./img/sarah4.jpg" />
-    </div>
-    <div class="sarah">
-      <img src = "./img/sarah5.jpg" />
-    </div> -->
-    
+  <div class="left">
+    <marquee height="350" direction ="up" behavior="alternate" scrollamount="8">👻 👻 👻</marquee>
+  </div>
+  <div class="container">    
     <div class="sarah" style="background-image: url(./img/sarah1.jpg)" onclick="document.getElementById('audio1').play()" oncontextmenu="document.getElementById('audio1').pause(); return false">
       <audio src="./audio/1.mp3" id="audio1"></audio>
     </div>
@@ -52,18 +35,17 @@
     <div class="sarah" style="background-image: url(./img/sarah6.jpg)" onclick="document.getElementById('audio6').play()" oncontextmenu="document.getElementById('audio6').pause(); return false">
       <audio src="./audio/6.mp3" id="audio6"></audio>
     </div>
-
-    <div class="right">
-      <marquee height="350" direction ="down" behavior="alternate" scrollamount="8">👻 👻 👻</marquee>
-    </div>  
   </div>
 
-  <div class="note">
+  <div class="right">
+    <marquee height="350" direction ="down" behavior="alternate" scrollamount="8">👻 👻 👻</marquee>
+  </div> 
+
+  <footer>
     <h2>
-      Hope you have a fun birthday babe! <br>Jace and I love & appreciate you so much. &lt;3<br>🦇 Happy Birthday Momma 😍
+      Hope you had a fun birthday babe!<br>Jace and I love & appreciate you so much. &lt;3
     </h2>
-    <marquee scrollamount="10"><span>🎉 💖 🎂 🍆 💦 🎉 💖 🎂 🍆 💦 🎉 💖 🎂 🍆 💦 🎉 💖 🎂 🍆 💦 🎉 💖 🎂 🍆 💦 🎉 💖 🎂 🎉 💖 🎂 🍆 💦 🎉 💖 🎂 🍆 💦 🎉 💖 🎂 🍆 💦 🎉 💖 🎂🍆 💦  🎉 💖 🎂 🍆 💦 </span></marquee>
-  </div>
+  </footer>
 
   <!-- <audio id="song" src="audio/2.mp3" autoplay controls></audio> -->
   <!-- <iframe src="audio/1.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> -->

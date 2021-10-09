@@ -6,13 +6,13 @@
 
 body {
   background: #222;
-  background: linear-gradient(#0c0701, #ff9100);
+  background: linear-gradient(to right, #0c0701, #ff9100);
   font-family: "PT Sans Narrow", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   margin: 0;
 }
@@ -23,7 +23,7 @@ h1 {
   text-shadow: 3px 3px rgba(0, 0, 0, 0.7);
   text-align: center;
   letter-spacing: 10px;
-  margin: 100px 0 50px;
+  margin: 50px 0 0;
   text-transform: uppercase;
 }
 
@@ -35,7 +35,7 @@ h1 {
 }
 
 .rclick {
-  margin: 0;
+  margin: 0 0 20px 0;
   color: #ff9100;
   font-size: 1.5rem;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
@@ -45,29 +45,35 @@ span {
   color: #ff9100;
 }
 
-.note marquee {
-  height: 40px;
-  margin: 20px auto;
-  cursor: none;
-  font-size: 12px;
-}
-
 .container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 50vh;
   width: 100vw;
-  margin: 20px 0px 50px;
 }
 
 .left,
 .right {
   cursor: none;
-  font-size: 5rem;
-  height: 25vh;
-  width: 100px;
-  margin: 0 50px;
+  font-size: 3.5rem;
+  width: 80px;
+  z-index: 2;
+}
+
+.left {
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .sarah {
@@ -75,37 +81,40 @@ span {
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  min-width: 280px;
-  height: 45vh;
+  min-width: 250px;
+  height: 650px;
   border: 5px solid #0c0701;
   border-radius: 1rem;
   color: #fff;
   cursor: pointer;
-  margin: 20px;
+  margin: 60px 10px;
   padding: 20px;
-  position: relative;
   transform: scale(0.9) rotate3d(0, 0, 0, 0);
   transition: all 0.5s ease-in;
 }
 
 .sarah:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .sarah.active {
   transform: rotate3d(0, 2, 0.5, 3.142rad) scale(1.2);
+  border: 5px solid #ff9100;
 }
 
-.note {
+footer {
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  text-shadow: 2px 2px rgba(255, 230, 4, 0.8);
-  width: 400px;
-  color: #0c0701;
-  font-size: 14px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 1rem;
+  height: 200px;
 }
 
 @media (max-width: 500px) {
-
   body {
     overflow: visible;
   }
