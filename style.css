@@ -146,6 +146,7 @@ span {
   }
 
   .sarah {
-    min-width: 125px;
+    min-width: 120px;
+    height: 35vh;
   }
 }
